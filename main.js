@@ -39,7 +39,7 @@ var buttons = [ //настройка кнопок в сцене надпись, 
 ["<", 20, 75, 20, 10, function() {if(listSkinMenu[2]-1 >= 0) listSkinMenu[2]--;}]], 
 
 [["Start", 20, 10, 60, 10, function() {start();menu = 2;}], //1
-["No Mother Mode", 20, 25, 60, 10, function() {start();menu = 3 ;}], 
+["Survival Mode", 20, 25, 60, 10, function() {start();menu = 3 ;}], 
 ["+", 60, 45, 20, 10, function() {if(lvl < 20) lvl++}], 
 ["-", 20, 45, 20, 10, function() {if(lvl > 1 ) lvl--}],
 ["Choice Of Skin", 20, 60, 60, 10, function() {listStatisticsMenu = parseInt(localStorage.getItem("skinPack")); menu = 9;}],
@@ -387,7 +387,7 @@ function draw() {//основной цикл рисования
 		if(menuOld == 2) {
 			var str = "Mode: Normal";
 		} else {
-			var str = "Mode: No mother";
+			var str = "Mode: Survival";
 		}
 		ctx.fillText(str, wper(100)/2 - getTextWidth(str, ctx.font)/2, hper(35));
 		var str = "Bonus: " + String(men[1]);
@@ -415,7 +415,7 @@ function draw() {//основной цикл рисования
 		if(menuOld == 2) {
 			var str = "Mode: Normal";
 		} else {
-			var str = "Mode: No mother";
+			var str = "Mode: Survival";
 		}
 		ctx.fillText(str, wper(100)/2 - getTextWidth(str, ctx.font)/2, hper(35));
 		for(i = 0; i < buttons[menu].length; i++) {
@@ -467,7 +467,7 @@ function draw() {//основной цикл рисования
 		if(modeStatisticsMenu == 2) {
 			var str = "Normal";
 		} else {
-			var str = "No Mother";
+			var str = "Survival";
 		}
 		ctx.fillText(str, wper(100)/2 - getTextWidth(str, ctx.font)/2, hper(60));
 		var str = "List " + String(listStatisticsMenu+1) + "/4";
